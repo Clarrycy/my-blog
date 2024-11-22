@@ -11,32 +11,16 @@ author: Clarrycy
 language: zh-CN
 timezone: ''
 
-# Multilang
-multilang:
-  enabled: true
-  defaultLang: zh-CN
-  languages:
-    - zh-CN
-    - en
-  excludeGenerator:
-    - js
-    - css
-    - fonts
-    - images
-  paths:
-    - source/_posts
-    - source/about
-  defaultFormat: :year/:month/:day/:title/
-  format:
-    zh-CN: :year/:month/:day/:title/
-    en: en/:year/:month/:day/:title/
+# i18n
+i18n:
+  type: [page, post]
+  generator: [index, archive, category, tag]
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://新仓库名.vercel.app
-permalink: :lang/:year/:month/:day/:title/
+permalink: :year/:month/:day/:title/
 permalink_defaults:
-  lang: zh-CN
 pretty_urls:
   trailing_index: true
   trailing_html: true
