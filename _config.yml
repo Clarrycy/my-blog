@@ -9,30 +9,34 @@ description: ''
 keywords:
 author: Clarrycy
 language: zh-CN
-i18n:
-  languages: 
+timezone: ''
+
+# Multilang
+multilang:
+  enabled: true
+  defaultLang: zh-CN
+  languages:
     - zh-CN
     - en
-  overwrite: true
-  generator:
-    - index
-    - archive
-    - category
-    - tag
-    - about
-  exclude:
+  excludeGenerator:
     - js
     - css
-    - lib
+    - fonts
     - images
-    - assets
-timezone: ''
+  paths:
+    - source/_posts
+    - source/about
+  defaultFormat: :year/:month/:day/:title/
+  format:
+    zh-CN: :year/:month/:day/:title/
+    en: en/:year/:month/:day/:title/
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://localhost:4000
-permalink: :year/:month/:day/:title/
+url: https://新仓库名.vercel.app
+permalink: :lang/:year/:month/:day/:title/
 permalink_defaults:
+  lang: zh-CN
 pretty_urls:
   trailing_index: true
   trailing_html: true
@@ -138,6 +142,13 @@ theme_config:
       background_img_dark: /images/bg.svg
       description: Exploring Tomorrow, Shaping Today
       hitokoto: false
+
+# Search
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
 
 # Server
 server:

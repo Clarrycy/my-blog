@@ -45,7 +45,7 @@ first_screen:
   enable: true
   background_img: /images/bg.svg
   background_img_dark: /images/bg.svg
-  description: Exploring Tomorrow, Shaping Today
+  description: Beyond Limits, Into Tomorrow.
   hitokoto: false
 
 
@@ -189,8 +189,14 @@ website_count:
 # See: https://github.com/theme-next/hexo-generator-searchdb
 # ---------------------------------------------------------------------------------------
 local_search:
-  enable: false   # Option values: true | false
-  preload: false  # Preload the search data when the page loads. Option values: true | false
+  enable: true
+  preload: true       # Preload the search data when the page loads
+  CDN:
+  top_n_per_article: 3
+  unescape: false
+  trigger: auto      # Values: auto | manual
+  auto_search: true  # Whether to automatically search when entering a keyword
+  min_length: 2      # Minimum length of keywords to start searching
 
 
 # ---------------------------------------------------------------------------------------
